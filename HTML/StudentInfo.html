@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<h2>Student Information Search</h2>
+
+<p>Type a student last name to search his/her information</p>
+
+<form action="../PHP/findStudent.php" method="POST">
+    Last Name:<br>
+  <input type="text" name="lastname">
+  <input type="submit" value="search">
+  <input type="reset" value="erase">
+</form>
+
+<p>Note: </p>
+<p>The form requires a last name as input</p>
+
+<button onclick="goBack()">Go Back</button>
+<script>
+function goBack() {
+    window.history.back();
+}
+</script></body>
+</html>

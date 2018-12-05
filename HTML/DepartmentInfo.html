@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<h2>Department Information Search</h2>
+
+<p>Type a major name of a department to search for information(e.g. CIS, MATH)</p>
+
+<form action="../PHP/findDepartment.php" method="POST">
+    Major:<br>
+  <input type="text" name="major_code">
+  <input type="submit" value="search">
+  <input type="reset" value="erase">
+</form>
+
+
+<button onclick="goBack()">Go Back</button>
+<script>
+function goBack() {
+    window.history.back();
+}
+</script></body>
+</html>

@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<h2>Class Information Search</h2>
+
+<p>Type a class CRN to search for information</p>
+
+<form action="../PHP/findClass.php" method="POST">
+    Class CRN:<br>
+  <input type="text" name="CRN">
+  <input type="submit" value="search">
+  <input type="reset" value="erase">
+</form>
+
+
+<button onclick="goBack()">Go Back</button>
+<script>
+function goBack() {
+    window.history.back();
+}
+</script></body>
+</html>
