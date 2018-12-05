@@ -26,13 +26,12 @@ or die("Error connecting to MySQL server.");
         echo "<h2>Failed to connect to MySQL: (" . $mysqli->connect_errno . ") ". $mysqli->connect_error . "<h2>";
     }
 
-    $lastname = $_POST['lastname'];
+    $major = $_POST['major_code'];
 
-    $lastname = mysqli_real_escape_string($conn, $lastanme);
+    $major = mysqli_real_escape_string($conn, $major);
 
-    #TODO: add proper query
-    $query = "select first_name, last_name, email, major from student where last_name = ";
-    $query = $query."'".$lastname."' ORDER BY first_name;";
+    #TODO: add proper query.
+    $query = "";
 
 ?>
 

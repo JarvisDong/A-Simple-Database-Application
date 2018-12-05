@@ -10,14 +10,13 @@ or die("Error connecting to MySQL server.");
 <html>
 <head>
 
-<h2>Student Information Search</h2>
+<h2>Academic Schedule Information</h2>
 </head>
 <body bgcolor="white">
 
-<p>Type a professor last name to search his/her information</p>
+<p>Choose one semester and see all available class information</p>
 
-<p>Note: </p>
-<p>The form requires a last name as input</p>
+<
 
 <hr>
 
@@ -26,13 +25,14 @@ or die("Error connecting to MySQL server.");
         echo "<h2>Failed to connect to MySQL: (" . $mysqli->connect_errno . ") ". $mysqli->connect_error . "<h2>";
     }
 
-    $lname = $_POST['lname'];
-
-    $lname = mysqli_real_escape_string($conn, $lname);
-
-    $query = "select fname, lname, email, major, office from professor where lname = ";
-    $query = $query."'".$lname."' ORDER BY fname;";
-
+    $term = $_POST['term'];
+    $major = $_POST['major_code'];
+    //create a legal SQL string that you can use in an SQL statement
+    $term = mysqli_real_escape_string($conn, $term);
+    $major = mysqli_real_escape_string($conn, $major);
+   
+    #TODO: add proper query. List all classes that satisify conditions
+    $query = ""
 ?>
 
 <hr>
@@ -41,10 +41,11 @@ or die("Error connecting to MySQL server.");
 <?php
 $result = mysqli_query($conn, $query) or die(mysqli_error($conn));
 
+#TODO: add proper rows
 print "<pre>";
 while ($row = mysqli_fetch_array($result, MYSQL_BOTH)) {
     print "\n";
-    print "$row[fname] $row[lname] $row[email] $row[major] $row[office]";
+    //print "$row[] $row[] $row[] $row[]";
 }
 print "</pre>";
 

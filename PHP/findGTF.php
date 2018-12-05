@@ -16,8 +16,8 @@ or die("Error connecting to MySQL server.");
 
 <p>Type a student ID to search his/her information</p>
 
-<p>Note: </p>
-<p>The form requires a ID number as input</p>
+<p>Note: <br>
+The form requires a ID number as input</p>
 
 <hr>
 
