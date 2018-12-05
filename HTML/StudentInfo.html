@@ -13,8 +13,21 @@
   <input type="reset" value="erase">
 </form>
 
+
 <p>Note: </p>
 <p>The form requires a last name as input</p>
+<br>
+<p>Type a student id to check if he/she is a GTF</p>
+
+<form action="../PHP/findGTF.php" method="POST">
+    ID Number:<br>
+  <input type="text" name="id">
+  <input type="submit" value="search">
+  <input type="reset" value="erase">
+</form>
+
+
+<hr>
 
 <button onclick="goBack()">Go Back</button>
 <script>

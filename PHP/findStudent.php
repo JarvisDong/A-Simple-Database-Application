@@ -31,7 +31,7 @@ or die("Error connecting to MySQL server.");
     $lastname = mysqli_real_escape_string($conn, $lastanme);
 
     #TODO: add proper query
-    $query = "select, first_name, last_name, email, major from student where last_name = ";
+    $query = "select first_name, last_name, email, major from student where last_name = ";
     $query = $query."'".$lastname."' ORDER BY first_name;";
 
 ?>
@@ -52,6 +52,13 @@ print "</pre>";
 mysqli_free_result($result);
 mysqli_close($conn);
 ?>
+
+<button onclick="goBack()">Go Back</button>
+<script>
+function goBack() {
+    window.history.back();
+}
+</script>
 
 </body>
 </html>

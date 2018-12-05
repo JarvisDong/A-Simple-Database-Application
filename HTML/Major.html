@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<h2>Major Information Search</h2>
+
+<p>Type a major to search relevant information such as class, department, and professor</p>
+
+<form action="../PHP/findMajor.php" method="POST">
+    Major Name:<br>
+  <input type="text" name="majorcode">
+  <input type="submit" value="search">
+  <input type="reset" value="erase">
+</form>
+
+
+<p>Note: </p>
+<p>The form requires a major code instead of full name</p>
+<br>
+<hr>
+
+<button onclick="goBack()">Go Back</button>
+<script>
+function goBack() {
+    window.history.back();
+}
+</script></body>
+</html>
