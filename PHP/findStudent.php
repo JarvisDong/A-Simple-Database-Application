@@ -31,7 +31,7 @@ or die("Error connecting to MySQL server.");
     $lastname = mysqli_real_escape_string($conn, $lastanme);
 
     #TODO: add proper query
-    $query = "SELECT st.id as id, (st.first_name, st.last_name) as name, st.email as email, st.major_code as major, cl.name as class
+    $query = "SELECT st.id as id, (st.first_name, st.last_name) as student, st.email as email, st.major_code as major, cl.name as class
             FROM student st JOIN major ma ON st.major_code = ma.code
             JOIN student_has_class sh ON st.id = sh.student_id
             JOIN class cl ON sh.class_CRN = cl.CRN
@@ -49,7 +49,7 @@ $result = mysqli_query($conn, $query) or die(mysqli_error($conn));
 print "<pre>";
 while ($row = mysqli_fetch_array($result, MYSQLI_BOTH)) {
     print "\n";
-    print "$row[id] $row[name] $row[email] $row[major] $row[class]";
+    print "$row[id] $row[student] $row[email] $row[major] $row[class]";
 }
 print "</pre>";
 
