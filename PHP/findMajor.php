@@ -10,14 +10,14 @@ or die("Error connecting to MySQL server.");
 <html>
 <head>
 
-<h2>Department Information Search</h2>
+<h2>Major Information Search</h2>
 </head>
 <body bgcolor="white">
 
-<p>Type a major to search information about its department of</p>
+<p>Type a major to search information</p>
 
 <p>Note: </p>
-<p>The form requires a last name as input</p>
+<p>The form requires a ,ajor code as input</p>
 
 <hr>
 

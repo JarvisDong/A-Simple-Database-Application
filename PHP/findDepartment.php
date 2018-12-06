@@ -17,7 +17,7 @@ or die("Error connecting to MySQL server.");
 <p>Type a major to search information about its department of</p>
 
 <p>Note: </p>
-<p>The form requires a last name as input</p>
+<p>The form requires a major code instead of major full name as input</p>
 
 <hr>
 

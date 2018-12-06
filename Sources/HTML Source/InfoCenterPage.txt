@@ -1,0 +1,28 @@
+<html>
+<body>
+
+<h1 style="text-align:left;">Welcome to information center!</h1>
+<p style="text-align:left;">here you can search information about class, student and professor by clicking corresponding buttons</p>
+
+
+<button onclick="location.href='./ClassInfo.html'">Check class info</button>
+<br>
+<button onclick="location.href='./StudentInfo.html'">Check student info</button>
+<br>
+<button onclick="location.href='./ProfInfo.html'">Check professor info</button>
+<br>
+<button onclick="location.href='./DepartmentInfo.html'">Check department info</button>
+<br>
+<button onclick="location.href='./Major.html'">Check major info</button>
+<hr>
+
+
+<button onclick="goBack()">Go Back</button>
+<script>
+function goBack() {
+    window.history.back();
+}
+</script>
+
+</body>
+</html>
