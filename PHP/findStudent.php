@@ -28,9 +28,8 @@ or die("Error connecting to MySQL server.");
 
     $lastname = $_POST['lastname'];
 
-    $lastname = mysqli_real_escape_string($conn, $lastanme);
+    $lastname = mysqli_real_escape_string($conn, $lastname);
 
-    #TODO: add proper query
     $query = "SELECT st.id as id, (st.first_name, st.last_name) as student, st.email as email, st.major_code as major, cl.name as class
             FROM student st JOIN major ma ON st.major_code = ma.code
             JOIN student_has_class sh ON st.id = sh.student_id
