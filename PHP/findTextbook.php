@@ -26,7 +26,7 @@ or die("Error connecting to MySQL server.");
         echo "<h2>Failed to connect to MySQL: (" . $mysqli->connect_errno . ") ". $mysqli->connect_error . "<h2>";
     }
 
-    $crn = $_POST['CRN'];
+    $crn = $_POST['CRNumber'];
 
     $crn = mysqli_real_escape_string($conn, $crn);
 
