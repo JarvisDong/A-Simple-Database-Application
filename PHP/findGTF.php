@@ -32,7 +32,7 @@ The form requires a ID number as input</p>
     $id = mysqli_real_escape_string($conn, $id);
 
     #TODO: add proper query
-    $query = "SELECT student.id as student_id, professor.id as professor_id, CONCAT('professor.fname', '',  'professor.lname') as professor_name
+    $query = "SELECT student.id, professor.id, CONCAT(professor.fname, ' ',professor.lname) as professor_name
             FROM professor 
             JOIN GTF ON GTF.professor_id = professor.id
             JOIN student ON student.id = GTF.student_id
@@ -49,7 +49,8 @@ $result = mysqli_query($conn, $query) or die(mysqli_error($conn));
 print "<pre>";
 while ($row = mysqli_fetch_array($result, MYSQLI_BOTH)) {
     print "\n";
-    print "$row[student_id] $row[professor_id] $row[professor_name]";
+    print "$row[id] $row[id] $row[professor_name]";
+    print "\n";
     print "if the student is not a GTF, the result should be blank";
 }
 print "</pre>";
