@@ -60,6 +60,8 @@ print "$query\n";
 print "$result";
 print "mysqli_query($conn, $query)";
 print "<pre>";
+$row = mysqli_fetch_array($result, MYSQLI_BOTH);
+print "$row";
 while ($row = mysqli_fetch_array($result, MYSQLI_BOTH)) {
     echo "ni";
     print "\n";
