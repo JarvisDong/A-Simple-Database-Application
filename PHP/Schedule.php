@@ -52,6 +52,8 @@ while ($row = mysqli_fetch_array($result, MYSQLI_BOTH)) {
     print "\n";
     print " Department:$row[department]";
     print " $row[building] $row[tel_number] $row[CRN] $row[name] $row[term] $row[title] $row[ISBN]";
+    print $term;
+    print $major;
 }
 print "</pre>";
 
