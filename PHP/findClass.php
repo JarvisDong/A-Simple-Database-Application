@@ -22,7 +22,6 @@ or die("Error connecting to MySQL server.");
 <hr>
 
 <?php
-echo "checkpoint1.0";
     if ($mysqli->connet_errno) {
         echo "<h2>Failed to connect to MySQL: (" . $mysqli->connect_errno . ") ". $mysqli->connect_error . "<h2>";
     }
