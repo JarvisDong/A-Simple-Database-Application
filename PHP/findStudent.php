@@ -34,7 +34,7 @@ or die("Error connecting to MySQL server.");
             FROM student st JOIN major ma ON st.major_code = ma.code
             JOIN student_has_class sh ON st.id = sh.student_id
             JOIN class cl ON sh.class_CRN = cl.CRN
-            WHERE st.last_name =";
+            WHERE st.last_name = ";
     $query = $query."'".$lastname."' ORDER BY st.id;";
 
 ?>
