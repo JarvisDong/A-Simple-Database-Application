@@ -56,12 +56,26 @@ else{
 
 print "$term\n";
 print "$major\n";
+
+print"\n";
 print "$query\n";
+print"\n";
+print"\n";
+
 print "$result";
+print"\n";
+
 print "mysqli_query($conn, $query)";
+print"\n";
+
+$WHATIS = mysqli_fetch_array($result, MYSQLI_BOTH);
+// $row = mysqli_fetch_array($result, MYSQLI_BOTH);
+print_r($WHATIS);
+
+
+
+
 print "<pre>";
-$row = mysqli_fetch_array($result, MYSQLI_BOTH);
-print "$row";
 while ($row = mysqli_fetch_array($result, MYSQLI_BOTH)) {
     echo "ni";
     print "\n";
