@@ -30,7 +30,7 @@ or die("Error connecting to MySQL server.");
 
     $crn = mysqli_real_escape_string($conn, $crn);
 
-    $query = "SELECT cl.CRN, tb.title, tb.ISBN, tb.author
+    $query = "SELECT cl.CRN as CRN, tb.title as title, tb.ISBN as ISBN, tb.author as author
             FROM textbook tb JOIN class cl ON tb.class_CRN = cl.CRN
             WHERE cl.CRN = ";
     $query = $query."  '".$crn."' ;";
