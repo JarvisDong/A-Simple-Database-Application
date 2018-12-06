@@ -30,8 +30,9 @@ or die("Error connecting to MySQL server.");
 
     $lname = mysqli_real_escape_string($conn, $lname);
 
-    $query = "select fname, lname, email, major, office from professor where lname = ";
-    $query = $query."'".$lname."' ORDER BY fname;";
+    #TODO: add proper queries
+    // $query = "select fname, lname, email, major, office from professor where lname = ";
+    // $query = $query."'".$lname."' ORDER BY fname;";
 
 ?>
 

@@ -14,9 +14,7 @@ or die("Error connecting to MySQL server.");
 </head>
 <body bgcolor="white">
 
-<p>Choose one semester and see all available class information</p>
-
-<
+<p>Choose one term and a major see information of available classes </p>
 
 <hr>
 
@@ -32,7 +30,7 @@ or die("Error connecting to MySQL server.");
     $major = mysqli_real_escape_string($conn, $major);
    
     #TODO: add proper query. List all classes that satisify conditions
-    $query = ""
+    //$query = ""
 ?>
 
 <hr>

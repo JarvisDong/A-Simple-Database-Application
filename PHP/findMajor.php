@@ -31,7 +31,7 @@ or die("Error connecting to MySQL server.");
     $major = mysqli_real_escape_string($conn, $major);
 
     #TODO: add proper query. List all professors, classes, textbooks that related to this major
-    $query = "";
+    //$query = "";
 
 ?>
 

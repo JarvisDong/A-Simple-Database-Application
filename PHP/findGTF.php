@@ -31,7 +31,7 @@ The form requires a ID number as input</p>
     $lastname = mysqli_real_escape_string($conn, $lastanme);
 
     #TODO: add proper query
-    $query = ""
+    //$query = ""
 ?>
 
 <hr>

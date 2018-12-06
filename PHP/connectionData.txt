@@ -1,5 +1,4 @@
 <?php
-
 $server = "ix.cs.uoregon.edu";
 $dbname ="mydb";
 $user = "jarvis";
