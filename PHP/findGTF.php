@@ -49,7 +49,7 @@ $result = mysqli_query($conn, $query) or die(mysqli_error($conn));
 print "<pre>";
 while ($row = mysqli_fetch_array($result, MYSQLI_BOTH)) {
     print "\n";
-    print "$row[student_id] $row[professor_id] $row[professor] $row[professor]";
+    print "$row[student_id] $row[professor_id] $row[professor]";
     print "if the student is not a GTF, the result could be blank";
 }
 print "</pre>";
