@@ -26,7 +26,7 @@ or die("Error connecting to MySQL server.");
         echo "<h2>Failed to connect to MySQL: (" . $mysqli->connect_errno . ") ". $mysqli->connect_error . "<h2>";
     }
 
-    $lastname = $_POST['lastname'];
+    $lastname = $_POST['lname'];
 
     $lastname = mysqli_real_escape_string($conn, $lastname);
 
@@ -35,7 +35,7 @@ or die("Error connecting to MySQL server.");
             JOIN student_has_class sh ON st.id = sh.student_id
             JOIN class cl ON sh.class_CRN = cl.CRN
             WHERE st.last_name = ";
-    $query = $query."'".$lastname."' ORDER BY st.id;";
+    $query = $query."'".$lastname."' ORDER BY id;";
 
 ?>
 

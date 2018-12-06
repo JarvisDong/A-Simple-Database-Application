@@ -47,6 +47,7 @@ print "<pre>";
 while ($row = mysqli_fetch_array($result, MYSQLI_BOTH)) {
     print "\n";
     print "$row[CRN] $row[title] $row[ISBN] $row[author]";
+    print "\n";
     echo "class not require a textbook if blank";
 }
 print "</pre>";

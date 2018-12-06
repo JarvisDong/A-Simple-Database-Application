@@ -32,7 +32,7 @@ The form requires a ID number as input</p>
     $id = mysqli_real_escape_string($conn, $id);
 
     #TODO: add proper query
-    $query = "SELECT student.id as student_id, professor.id as professor_id, (professor.fname, professor.lname) as professor_name
+    $query = "SELECT student.id as student_id, professor.id as professor_id, CONCAT('professor.fname', '',  'professor.lname') as professor_name
             FROM professor 
             JOIN GTF ON GTF.professor_id = professor.id
             JOIN student ON student.id = GTF.student_id
