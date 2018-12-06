@@ -30,7 +30,7 @@ or die("Error connecting to MySQL server.");
 
     $major = mysqli_real_escape_string($conn, $major);
 
-    $query = "SELECT building, name, tel_number major_code FROM department WHERE major_code = ";
+    $query = "SELECT building, name, tel_number, major_code FROM department WHERE major_code = ";
     $query = $query."  '".$major."'  ;";
 
 ?>
@@ -44,7 +44,7 @@ $result = mysqli_query($conn, $query) or die(mysqli_error($conn));
 print "<pre>";
 while ($row = mysqli_fetch_array($result, MYSQLI_BOTH)) {
     print "\n";
-    print "$row[first_name] $row[lastname] $row[email] $row[major]";
+    print "$row[building] $row[name] $row[tel_number] $row[major_code]";
 }
 print "</pre>";
 
