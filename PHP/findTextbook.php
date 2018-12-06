@@ -32,8 +32,8 @@ or die("Error connecting to MySQL server.");
 
     $query = "SELECT tb.title, tb.ISBN, tb.author
             FROM textbook tb JOIN class cl ON tb.class_CRN = cl.CRN
-            WHERE cl.CRN =";
-    $query = $query."'".$crn."' ;";
+            WHERE cl.CRN = ";
+    $query = $query."  '".$crn."' ;";
 
 ?>
 
