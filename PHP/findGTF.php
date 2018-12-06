@@ -48,10 +48,10 @@ $result = mysqli_query($conn, $query) or die(mysqli_error($conn));
 
 print "<pre>";
 while ($row = mysqli_fetch_array($result, MYSQLI_BOTH)) {
+    print "if the student is not a GTF, the result should be blank";
     print "\n";
     print "$row[id] $row[id] $row[professor_name]";
     print "\n";
-    print "if the student is not a GTF, the result should be blank";
 }
 print "</pre>";
 

@@ -46,39 +46,12 @@ or die("Error connecting to MySQL server.");
 <?php
 $result = mysqli_query($conn, $query) or die(mysqli_error($conn));
 
-if ($result == False) {
-    print "result is false!!!!!!!!!!!";
-}
-else{
-    print " RESult is not false.";
-}
-
-
-print "$term\n";
-print "$major\n";
-
-print "$query\n";
-
-print "$result";
-
-print "mysqli_query($conn, $query)";
-
-$WHATIS = mysqli_fetch_assoc($result);
-// $row = mysqli_fetch_array($result, MYSQLI_BOTH);
-print_r($WHATIS);
-
-
-
-
 print "<pre>";
-while ($row = mysqli_fetch_assoc($result)) {
-    echo "ni";
-    print "\n";
+while ($row = mysqli_fetch_array($result, MYSQLI_BOTH)) {
     print " Department:$row[department]";
     print " $row[building] $row[tel_number] $row[CRN] $row[name] $row[term] $row[title] $row[ISBN]";
 
 }
-echo "ma";
 print "</pre>";
 
 mysqli_free_result($result);
