@@ -26,16 +26,13 @@ The form requires a ID number as input</p>
         echo "<h2>Failed to connect to MySQL: (" . $mysqli->connect_errno . ") ". $mysqli->connect_error . "<h2>";
     }
 
-    $lastname = $_POST['lastname'];
-
-    $lastname = mysqli_real_escape_string($conn, $lastanme);
 
     $id = $_POST[id];
 
     $id = mysqli_real_escape_string($conn, $id);
 
     #TODO: add proper query
-    $query = "SELECT  student.id, professor.id, professor.fname, professor.lname, professor.office, professor.email
+    $query = "SELECT  student.id as student_id, professor.id as professor_id, (professor.fname, professor.lname) as professor
             FROM professor 
             JOIN GTF ON GTF.professor_id = professor.id
             JOIN student ON student.id = GTF.student_id
@@ -49,12 +46,11 @@ The form requires a ID number as input</p>
 <?php
 $result = mysqli_query($conn, $query) or die(mysqli_error($conn));
 
-#TODO: add proper rows
 print "<pre>";
 while ($row = mysqli_fetch_array($result, MYSQLI_BOTH)) {
     print "\n";
-    print "$row[student.id] $row[professor.id] $row[professor.fname] $row[professor.lname] $row[professor.office] $row[professor.email]";
-    print "if the student is not a GTF, the result could be blank"
+    print "$row[student_id] $row[professor_id] $row[professor] $row[professor]";
+    print "if the student is not a GTF, the result could be blank";
 }
 print "</pre>";
 

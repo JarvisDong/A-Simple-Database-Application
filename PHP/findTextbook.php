@@ -14,10 +14,10 @@ or die("Error connecting to MySQL server.");
 </head>
 <body bgcolor="white">
 
-<p>Type a professor's last name to search his/her information</p>
+<p>Type a class CRN to find out required textbooks</p>
 
 <p>Note: </p>
-<p>The form requires a last name as input</p>
+<p>The form requires a CRN as input</p>
 
 <hr>
 
@@ -26,13 +26,14 @@ or die("Error connecting to MySQL server.");
         echo "<h2>Failed to connect to MySQL: (" . $mysqli->connect_errno . ") ". $mysqli->connect_error . "<h2>";
     }
 
-    $lname = $_POST['lname'];
+    $crn = $_POST['CRN'];
 
-    $lname = mysqli_real_escape_string($conn, $lname);
+    $crn = mysqli_real_escape_string($conn, $crn);
 
-    #TODO: add proper queries
-    // $query = "select fname, lname, email, major, office from professor where lname = ";
-    // $query = $query."'".$lname."' ORDER BY fname;";
+    $query = "SELECT tb.title, tb.ISBN, tb.author
+            FROM textbook tb JOIN class cl ON tb.class_CRN = cl.CRN
+            WHERE cl.CRN =";
+    $query = $query."'".$crn."' ;";
 
 ?>
 

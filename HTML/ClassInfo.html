@@ -15,8 +15,22 @@
   <input type="reset" value="erase">
 </form>
 
-<hr>
+<br>
 
+<h2>Textbook Information Search</h2>
+
+<p>Type a class CRN to find out required textbooks</p>
+
+<p>Currently our school have classes CRN ranged [1000, 1045]</p>
+
+<form action="../PHP/findClass.php" method="POST">
+    Class CRN:<br>
+  <input type="text" name="CRN">
+  <input type="submit" value="search">
+  <input type="reset" value="erase">
+</form>
+
+<hr>
 <button onclick="goBack()">Go Back</button>
 <script>
 function goBack() {

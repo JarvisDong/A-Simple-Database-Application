@@ -47,7 +47,7 @@ This is a web application made to help school faculties and students to check in
 
 - check information on classes
 - find out people or class relavent to a major
-- check information on student/professor/department
+- check information on student and which class he/she is taking
 - find out if a student is a GTF
 - check class schedule
 
