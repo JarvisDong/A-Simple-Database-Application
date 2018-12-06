@@ -40,7 +40,7 @@ or die("Error connecting to MySQL server.");
     $query = $query."  '".$term."'  ;";         
 ?>
 
-<hr>
+<br>
 <p>Result of searching:</p>
 
 <?php
@@ -50,7 +50,8 @@ $result = mysqli_query($conn, $query) or die(mysqli_error($conn));
 print "<pre>";
 while ($row = mysqli_fetch_array($result, MYSQLI_BOTH)) {
     print "\n";
-    //print "$row[] $row[] $row[] $row[]";
+    print " Department:$row[department]";
+    print " $row[building] $row[tel_number] $row[CRN] $row[name] $row[term] $row[title] $row[ISBN]";
 }
 print "</pre>";
 
@@ -58,6 +59,7 @@ mysqli_free_result($result);
 mysqli_close($conn);
 ?>
 
+<hr>
 <button onclick="goBack()">Go Back</button>
 <script>
 function goBack() {
