@@ -30,7 +30,7 @@ or die("Error connecting to MySQL server.");
 
     $crn = mysqli_real_escape_string($conn, $crn);
 
-    $query = "SELECT tb.title, tb.ISBN, tb.author
+    $query = "SELECT cl.CRN, tb.title, tb.ISBN, tb.author
             FROM textbook tb JOIN class cl ON tb.class_CRN = cl.CRN
             WHERE cl.CRN = ";
     $query = $query."  '".$crn."' ;";
@@ -46,7 +46,7 @@ $result = mysqli_query($conn, $query) or die(mysqli_error($conn));
 print "<pre>";
 while ($row = mysqli_fetch_array($result, MYSQLI_BOTH)) {
     print "\n";
-    print "$row[fname] $row[lname] $row[email] $row[major] $row[office]";
+    print "$row[CRN] $row[title] $row[author] $row[ISBN]";
 }
 print "</pre>";
 
