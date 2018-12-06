@@ -36,7 +36,7 @@ or die("Error connecting to MySQL server.");
     JOIN textbook tb ON cl.CRN = tb.class_CRN
     WHERE ma.code = ";  
     $query = $query."    '  ".$major."    '       ";
-    $query = $query."    '  " ."AND cl.term =". "    ' "; 
+    $query = $query."      " ."AND cl.term =". "     "; 
     $query = $query."  '".$term."'  ;";         
 ?>
 
