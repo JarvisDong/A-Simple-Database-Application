@@ -43,7 +43,7 @@ or die("Error connecting to MySQL server.");
 $result = mysqli_query($conn, $query) or die(mysqli_error($conn));
 
 print "<pre>";
-while ($row = mysqli_fetch_array($result, MYSQL_BOTH)) {
+while ($row = mysqli_fetch_array($result, MYSQLI_BOTH)) {
     print "\n";
     print "$row[first_name] $row[lastname] $row[email] $row[major]";
 }

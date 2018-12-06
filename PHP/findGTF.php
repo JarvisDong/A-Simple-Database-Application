@@ -30,8 +30,17 @@ The form requires a ID number as input</p>
 
     $lastname = mysqli_real_escape_string($conn, $lastanme);
 
+    $id = $_POST[id];
+
+    $id = mysqli_real_escape_string($conn, $id);
+
     #TODO: add proper query
-    //$query = ""
+    $query = "SELECT  student.id, professor.id, professor.fname, professor.lname, professor.office, professor.email
+            FROM professor 
+            JOIN GTF ON GTF.professor_id = professor.id
+            JOIN student ON student.id = GTF.student_id
+            WHERE GTF.student_id = ";
+    $query = $query."   '".$id."'  ;";
 ?>
 
 <hr>
@@ -42,9 +51,10 @@ $result = mysqli_query($conn, $query) or die(mysqli_error($conn));
 
 #TODO: add proper rows
 print "<pre>";
-while ($row = mysqli_fetch_array($result, MYSQL_BOTH)) {
+while ($row = mysqli_fetch_array($result, MYSQLI_BOTH)) {
     print "\n";
-    //print "$row[] $row[] $row[] $row[]";
+    print "$row[student.id] $row[professor.id] $row[professor.fname] $row[professor.lname] $row[professor.office] $row[professor.email]";
+    print "if the student is not a GTF, the result could be blank"
 }
 print "</pre>";
 
