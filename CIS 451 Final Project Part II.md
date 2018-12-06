@@ -55,13 +55,21 @@ This is a web application made to help school faculties and students to check in
 
 ### User's Guide
 
-The application is quite simple to use. It has two main functions. On Welcome page, there are 2 buttons. One is checking information about people in school. Behind it there are 5 more buttons with specific usage. The other one is checking class by term. You can choose terms and majors from box to search
+The application is quite simple to use. 
+
+It has two main functions. On Welcome page, there are 2 buttons.
+
+One is checking information about people in school. Behind it there are 5 more buttons with specific usage. 
+
+The other one is checking class by term. You can choose terms and majors from box to search.
 
 
 
 ### Implementation Code
 
-All sources including codes andtables can be found in http://ix.cs.uoregon.edu/~haojund//A-Simple-Databse-Application/Sources/
+All sources including codes and tables can be found in http://ix.cs.uoregon.edu/~haojund//A-Simple-Databse-Application/Sources/
+
+You may check tables before tests for it makes test more easier.
 
 ### Conclusion
 

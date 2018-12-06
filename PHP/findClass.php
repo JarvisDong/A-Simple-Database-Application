@@ -31,7 +31,7 @@ or die("Error connecting to MySQL server.");
     $crn = mysqli_real_escape_string($conn, $crn);
 
     #TODO: add proper query
-    $query = "select CRN, name, room, textbook from class where CRN = ";
+    $query = "select * from class where CRN = ";
     $query = $query."'".$crn."';";
 ?>
 
