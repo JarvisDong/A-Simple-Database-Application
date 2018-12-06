@@ -45,13 +45,13 @@ or die("Error connecting to MySQL server.");
 
 <?php
 $result = mysqli_query($conn, $query) or die(mysqli_error($conn));
-print "$term";
-print "$major";
-print "$query";
+print "$term\n";
+print "$major\n";
+print "$query\n";
 print "$result";
 print "mysqli_query($conn, $query)";
 print "<pre>";
-while ($row = mysqli_fetch_array($result, MYSQLI_BOTH)) {
+while ($row = mysqli_fetch_array($result)) {
     echo "ni";
     print "\n";
     print " Department:$row[department]";
