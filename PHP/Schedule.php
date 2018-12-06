@@ -35,7 +35,7 @@ or die("Error connecting to MySQL server.");
     JOIN class cl ON ma.code = cl.major_code
     JOIN textbook tb ON cl.CRN = tb.class_CRN
     WHERE ma.code = ";  
-    $query = $query."    '  ".$major."    '       ";
+    $query = $query."    '".$major."'       ";
     $query = $query."      " ."AND cl.term =". "     "; 
     $query = $query."  '".$term."'  ;";         
 ?>
@@ -48,7 +48,8 @@ $result = mysqli_query($conn, $query) or die(mysqli_error($conn));
 print "$term";
 print "$major";
 print "$query";
-echo "$result";
+print "$result";
+print "mysqli_query($conn, $query)";
 print "<pre>";
 while ($row = mysqli_fetch_array($result, MYSQLI_BOTH)) {
     echo "ni";
