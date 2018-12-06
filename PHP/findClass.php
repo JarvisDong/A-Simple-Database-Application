@@ -36,7 +36,7 @@ or die("Error connecting to MySQL server.");
 ?>
 
 <hr>
-<p>Result of searching:</p>
+<p>Result  bbbbbbb of searching:</p>
 
 <?php
 $result = mysqli_query($conn, $query) or die(mysqli_error($conn));
