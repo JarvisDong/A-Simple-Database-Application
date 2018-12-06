@@ -44,18 +44,18 @@ or die("Error connecting to MySQL server.");
 <p>Result of searching:</p>
 
 <?php
-echo "wo! ";
 $result = mysqli_query($conn, $query) or die(mysqli_error($conn));
-echo "cao";
-
+print "$term";
+print "$major";
+print "$query";
+echo "$result";
 print "<pre>";
 while ($row = mysqli_fetch_array($result, MYSQLI_BOTH)) {
     echo "ni";
     print "\n";
     print " Department:$row[department]";
     print " $row[building] $row[tel_number] $row[CRN] $row[name] $row[term] $row[title] $row[ISBN]";
-    print "$term";
-    print "$major";
+
 }
 echo "ma";
 print "</pre>";
