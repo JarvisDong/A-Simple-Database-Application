@@ -32,7 +32,7 @@ or die("Error connecting to MySQL server.");
 
     #TODO: add proper query
     $query = "select * from class where CRN = ";
-    $query = $query."   '".$crn."'    ";
+    $query = $query."   '".$crn."'  ; ";
 ?>
 
 <hr>
@@ -44,7 +44,7 @@ $result = mysqli_query($conn, $query) or die(mysqli_error($conn));
 print "<pre>";
 while ($row = mysqli_fetch_array($result, MYSQL_BOTH)) {
     print "\n";
-    print "$row[CRN] $row[name] $row[room]";
+    print "$row[CRN] $row[name] $row[room] $row[term] $row[major_code]";
 }
 print "</pre>";
 
