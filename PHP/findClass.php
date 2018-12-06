@@ -44,7 +44,9 @@ $result = mysqli_query($conn, $query) or die(mysqli_error($conn));
 print "<pre>";
 while ($row = mysqli_fetch_array($result, MYSQL_BOTH)) {
     print "\n";
+    print "checkpoint1";
     print "$row[CRN] $row[name] $row[room] $row[term] $row[major_code]";
+    print "checkpoint2";
 }
 print "</pre>";
 
