@@ -44,6 +44,7 @@ or die("Error connecting to MySQL server.");
 <p>Result of searching:</p>
 
 <?php
+echo "wo! ";
 $result = mysqli_query($conn, $query) or die(mysqli_error($conn));
 echo "cao";
 
