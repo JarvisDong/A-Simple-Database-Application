@@ -29,8 +29,15 @@ or die("Error connecting to MySQL server.");
     $term = mysqli_real_escape_string($conn, $term);
     $major = mysqli_real_escape_string($conn, $major);
    
-    #TODO: add proper query. List all classes that satisify conditions
-    //$query = ""
+    
+    $query = "SELECT de.name as department, de.building, de.tel_number, cl.CRN, cl.name, cl.term, tb.title, tb.ISBN
+    FROM major ma JOIN department de ON ma.code = de.major_code
+    JOIN class cl ON ma.code = cl.major_code
+    JOIN textbook tb ON cl.CRN = tb.class_CRN
+    WHERE ma.code = ";  
+    $query = $query."    '  ".$major."    '       ";
+    $query = $query."    '  " ."AND cl.term =". "    ' "; 
+    $query = $query."  '".$term."'  ;";         
 ?>
 
 <hr>
