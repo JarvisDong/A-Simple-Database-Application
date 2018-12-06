@@ -30,8 +30,8 @@ or die("Error connecting to MySQL server.");
 
     $major = mysqli_real_escape_string($conn, $major);
 
-    #TODO: add proper query.
-    $query = "";
+    $query = "SELECT building, name, tel_number major_code FROM department WHERE major_code = ";
+    $query = $query."  '".$major."'  ;";
 
 ?>
 
