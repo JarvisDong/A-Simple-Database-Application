@@ -48,8 +48,7 @@ $result = mysqli_query($conn, $query) or die(mysqli_error($conn));
 print "<pre>";
 while ($row = mysqli_fetch_array($result, MYSQLI_BOTH)) {
     print "\n";
-    #TODO: print proper rows
-    //print "$row[] $row[] $row[] $row[]";
+    print "$row[ma_name] $row[de_name] $row[de_building] $row[de_tel_number] $row[cl_CRN] $row[cl_name] $row[cl_term]";
 }
 print "</pre>";
 
