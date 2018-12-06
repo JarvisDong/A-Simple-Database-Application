@@ -31,7 +31,7 @@ or die("Error connecting to MySQL server.");
     $major = mysqli_real_escape_string($conn, $major);
 
     #TODO: add proper query. List all professors, classes, textbooks that related to this major
-    $query = "SELECT ma.name, de.name, de.building, de.tel_number, de.tel_number, cl.CRN, cl.name, cl.term
+    $query = "SELECT ma.name as major_name, de.name as department_name, de.building as building, de.tel_number as telphone, cl.CRN as CRN, cl.name as class, cl.term as term
             FROM major ma JOIN department de ON ma.code = de.major_code
             JOIN class cl ON ma.code = cl.major_code
             WHERE ma.code = ";
@@ -48,7 +48,7 @@ $result = mysqli_query($conn, $query) or die(mysqli_error($conn));
 print "<pre>";
 while ($row = mysqli_fetch_array($result, MYSQLI_BOTH)) {
     print "\n";
-    print "$row[ma_name] $row[de_name] $row[de_building] $row[de_tel_number] $row[cl_CRN] $row[cl_name] $row[cl_term]";
+    print "$row[major_name] $row[department_name] $row[building] $row[telphone] $row[CRN] $row[class] $row[term]";
 }
 print "</pre>";
 
