@@ -27,7 +27,7 @@ The form requires a ID number as input</p>
     }
 
 
-    $id = $_POST[id];
+    $id = $_POST['id'];
 
     $id = mysqli_real_escape_string($conn, $id);
 
