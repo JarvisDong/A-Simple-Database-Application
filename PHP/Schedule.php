@@ -46,6 +46,7 @@ or die("Error connecting to MySQL server.");
 <?php
 $result = mysqli_query($conn, $query) or die(mysqli_error($conn));
 echo "cao";
+
 print "<pre>";
 while ($row = mysqli_fetch_array($result, MYSQLI_BOTH)) {
     echo "ni";
