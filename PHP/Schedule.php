@@ -37,7 +37,9 @@ or die("Error connecting to MySQL server.");
     WHERE ma.code = ";  
     $query = $query."    '".$major."'       ";
     $query = $query."      " ."AND cl.term =". "     "; 
-    $query = $query."  '".$term."'  ;";         
+    $query = $query."  '".$term."'  ;"; 
+
+    // echo $query;        
 ?>
 
 <br>
@@ -48,9 +50,10 @@ $result = mysqli_query($conn, $query) or die(mysqli_error($conn));
 
 print "<pre>";
 while ($row = mysqli_fetch_array($result, MYSQLI_BOTH)) {
+
     print " Department:$row[department]";
     print " $row[building] $row[tel_number] $row[CRN] $row[name] $row[term] $row[title] $row[ISBN]";
-
+    print "<br>";
 }
 print "</pre>";
 
